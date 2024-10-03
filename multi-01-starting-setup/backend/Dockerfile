@@ -10,4 +10,7 @@ COPY . .
 
 EXPOSE 80
 
-CMD ["node", "app.js"]
+ENV MONGO_INITDB_ROOT_USERNAME=mongoadmin
+ENV MONGO_INITDB_ROOT_PASSWORD=secret
+
+CMD [ "npm", "start" ]
